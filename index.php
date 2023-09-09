@@ -1,3 +1,9 @@
+<?php
+  session_start();
+
+  include "./functions.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,15 +24,7 @@
     <?php
       $lengthChosen = $_POST['password-length'];
 
-      function generatePassword($lengthChosen) {
-        $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!"£$%&/()=?^*ç°§,.-;:_+';
-        $charactersLength = strlen($characters);
-        $result = '';
-        for($i = 0; $i < $lengthChosen; $i++) {
-          $result .= $characters[random_int(0, $charactersLength - 1)];
-        }
-        return $result;
-      }
+      
     ?>
 
     <div><?php echo $lengthChosen ?></div>
