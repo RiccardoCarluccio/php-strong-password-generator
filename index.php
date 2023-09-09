@@ -14,21 +14,23 @@
 </head>
 <body>
   
-  <form action="index.php" method="POST" oninput="result.value=parseInt(password-length.value)">
-    <!-- <input type="text" name="password-length"> -->
-    <input type="number" name="password-length" min="8" max="16" placeholder="From 8 to 16">
-    <!-- <input type="range" name="password-length" min="8" max="16"> -->
-    <input type="submit">
-    <input type="reset">
+  <div class="main-container">
+    <form action="index.php" method="POST" oninput="result.value=parseInt(password-length.value)">
+      <!-- <input type="text" name="password-length"> -->
+      <input type="number" name="password-length" min="8" max="16" placeholder="From 8 to 16">
+      <!-- <input type="range" name="password-length" min="8" max="16"> -->
+      <input type="submit">
+      <input type="reset">
 
-    <?php
-      $lengthChosen = $_POST['password-length'];
+      <?php
+        $lengthChosen = $_POST['password-length'];
 
-      
-    ?>
+        
+      ?>
 
-    <div><?php echo $lengthChosen ?></div>
-  </form>
+      <div class="pass-result">Length chosen: <?php echo $lengthChosen ?> characters</div>
+    </form>
+  </div>
 
 </body>
 </html>

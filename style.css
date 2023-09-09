@@ -3,3 +3,16 @@
   margin: 0;
   padding: 0;
 }
+
+.main-container {
+  width: 100vw;
+  height: 100vh;
+  padding: 5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.pass-result {
+  margin-top: 2rem;
+  text-align: center;
+}
